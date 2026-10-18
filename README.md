@@ -2,6 +2,8 @@
 
 A fully linked income statement, balance sheet and cash flow forecast for an illustrative manufacturing company, built in Excel with base, upside and downside scenarios.
 
+**[⬇ Download the Excel model](https://github.com/MuhammedAnshajK/three-statement-model/raw/main/three_statement_model.xlsx)**
+
 ![Income statement](images/income-statement.png)
 
 ## What this does
