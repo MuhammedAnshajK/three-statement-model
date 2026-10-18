@@ -2,7 +2,7 @@
 
 A fully linked income statement, balance sheet and cash flow forecast for an illustrative manufacturing company, built in Excel with base, upside and downside scenarios.
 
-**[⬇ Download the Excel model](https://github.com/MuhammedAnshajK/three-statement-model/raw/main/three_statement_model.xlsx)**
+**Downloads:** [⬇ Excel model](https://github.com/MuhammedAnshajK/three-statement-model/raw/main/three_statement_model.xlsx) · [⬇ PDF version](https://github.com/MuhammedAnshajK/three-statement-model/raw/main/three_statement_model.pdf) · [⬇ Python script](https://github.com/MuhammedAnshajK/three-statement-model/raw/main/build_model.py)
 
 ![Income statement](images/income-statement.png)
 
@@ -54,6 +54,7 @@ Colour key: blue = hardcoded input, black = formula, green = link to another she
 ## Files
 
 - `three_statement_model.xlsx`: the full model (Cover, Assumptions, Income Statement, Balance Sheet, Cash Flow, Checks)
+- `three_statement_model.pdf`: print-ready PDF of every sheet, for viewing without Excel
 - `build_model.py`: Python script (openpyxl) that generates the workbook, so the model structure is reproducible
 - `images/`: screenshots
 
