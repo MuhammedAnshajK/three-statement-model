@@ -10,23 +10,23 @@ A fully linked income statement, balance sheet and cash flow forecast for NIKE, 
 
 The model starts from Nike's actual results for FY2024 to FY2026 (years ending 31 May) and forecasts FY2027 to FY2031. Revenue is built region by region, costs and working capital are driven by ratios and days, and cash comes out of the cash flow statement into the balance sheet. Every forecast number is a formula driven by one Assumptions sheet, so one change, such as Greater China growth or inventory days, flows through all three statements.
 
-**Base case result:** revenue recovers from $46.4bn in FY2026 to $55.1bn in FY2031 (3.5% a year), the operating (EBIT) margin rebuilds from 8.2% to 11.7%, and diluted EPS rises from $2.10 to $3.88. Free cash flow of about $4.6bn to $5.9bn a year funds dividends, buybacks and $2bn of debt repayment, while cash and short-term investments stay above $8bn.
+**Base case result:** FY2027 is set to match Nike's guidance from 1 October 2026: revenue falls 8.5% to $42.4bn (Greater China down 20%) and diluted EPS drops to $1.09 after restructuring costs. Revenue then recovers to $49.1bn by FY2031 and the operating (EBIT) margin rebuilds from 4.7% to 11.1%, with EPS reaching $3.23. Free cash flow of $3.3bn to $5.0bn a year covers the dividend, a smaller buyback programme and $2bn of debt repayment, while cash and short-term investments stay near $7bn to $8bn.
 
 ## Scenarios (FY2031)
 
 | Scenario | Revenue | Growth a year (FY26 to FY31) | EBIT | EBIT margin |
 |---|---|---|---|---|
-| Upside | $60.5bn | 5.5% | $8.0bn | 13.2% |
-| Base | $55.1bn | 3.5% | $6.5bn | 11.7% |
-| Downside | $47.8bn | 0.6% | $4.9bn | 10.2% |
+| Upside | $54.4bn | 3.2% | $6.9bn | 12.6% |
+| Base | $49.1bn | 1.2% | $5.5bn | 11.1% |
+| Downside | $42.6bn | (1.7%) | $4.1bn | 9.6% |
 
-The upside assumes a faster recovery in North America and Greater China and margins returning towards FY2024 levels. The downside assumes Greater China and Converse keep shrinking and gross margin stays near today's 43%.
+The upside assumes a milder FY2027 decline, then a faster recovery in North America and Greater China with gross margin returning to 46%. The downside assumes a deeper FY2027 fall, Greater China and Converse shrinking for longer and gross margin stuck near 42% to 43%.
 
 ## Data
 
 - **History:** income statement, balance sheet and cash flow from Nike's 10-K filings for FY2024, FY2025 and FY2026 (SEC EDGAR). Smaller lines are grouped; totals agree to the filings, which the Checks sheet confirms.
 - **Revenue by region:** North America, Europe Middle East & Africa, Greater China, Asia Pacific & Latin America, and Converse, from Nike's fiscal 2026 results release.
-- **Forecast:** my own assumptions, not company guidance.
+- **Forecast:** FY2027 total revenue and EPS are anchored to Nike's guidance (Q1 FY2027 results, 1 October 2026). The split by region and FY2028 to FY2031 are my own assumptions.
 
 ## Approach
 
@@ -42,14 +42,14 @@ The upside assumes a faster recovery in North America and Greater China and marg
 
 | Driver | FY2027E | FY2031E |
 |---|---|---|
-| Revenue growth: North America | 4.0% | 4.0% |
-| Revenue growth: Greater China | (5.0%) | 4.0% |
-| Gross margin | 43.0% | 44.5% |
-| Demand creation (% of revenue) | 10.0% | 9.5% |
-| Operating overhead (% of revenue) | 24.3% | 23.3% |
+| Revenue growth: North America | (6.0%) | 4.0% |
+| Revenue growth: Greater China | (20.0%) | 4.0% |
+| Gross margin | 42.5% | 44.5% |
+| Demand creation (% of revenue) | 10.5% | 9.6% |
+| Operating overhead (% of revenue) | 27.3% | 23.8% |
 | Inventory days | 100 | 95 |
 | Tax rate | 19% | 19% |
-| Share buybacks ($m) | 1,000 | 3,500 |
+| Share buybacks ($m) | 250 | 3,000 |
 
 ## Screenshots
 

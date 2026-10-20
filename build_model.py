@@ -41,13 +41,13 @@ SEG_HIST = {"North America": [19572, 20511], "Europe, Middle East & Africa": [12
 OTHER_HIST = [48 - 97, 49 + 2]   # Global Brand Divisions + Corporate
 # Growth assumptions, FY2027 to FY2031, by scenario (base, upside, downside)
 GROWTH = {
-    "North America":                [[.04, .05, .05, .04, .04], [.06, .07, .07, .06, .05], [.01, .02, .02, .02, .02]],
-    "Europe, Middle East & Africa": [[.02, .03, .04, .04, .03], [.04, .05, .06, .05, .04], [-.02, 0, .01, .02, .02]],
-    "Greater China":                [[-.05, 0, .03, .04, .04], [0, .05, .06, .06, .05], [-.12, -.06, -.02, 0, .01]],
-    "Asia Pacific & Latin America": [[.02, .04, .05, .05, .05], [.04, .06, .07, .07, .06], [-.01, .01, .02, .03, .03]],
-    "Converse":                     [[-.10, -.03, .02, .02, .02], [-.05, .02, .04, .04, .03], [-.18, -.08, -.03, 0, 0]],
+    "North America":                [[-.06, .03, .05, .05, .04], [-.03, .05, .07, .06, .05], [-.09, 0, .02, .03, .03]],
+    "Europe, Middle East & Africa": [[-.08, .02, .04, .04, .04], [-.05, .04, .06, .05, .05], [-.11, -.02, .01, .02, .02]],
+    "Greater China":                [[-.20, -.03, .03, .04, .04], [-.15, .03, .06, .06, .05], [-.26, -.10, -.03, 0, .01]],
+    "Asia Pacific & Latin America": [[-.06, .03, .05, .05, .05], [-.03, .05, .07, .07, .06], [-.09, 0, .02, .03, .03]],
+    "Converse":                     [[-.15, -.05, 0, .02, .02], [-.10, 0, .03, .04, .03], [-.20, -.10, -.03, 0, 0]],
 }
-GM = [[.430, .435, .440, .445, .445], [.435, .445, .455, .460, .460], [.425, .425, .428, .430, .430]]
+GM = [[.425, .430, .435, .440, .445], [.430, .440, .450, .455, .460], [.420, .420, .425, .430, .430]]
 
 # ---------- styles ----------
 AR = "Arial"
@@ -195,8 +195,8 @@ def build():
             ws_a[f"{col}{gm_rows[-1]}"].font = F_IN
     A.line("gm", "Gross margin: selected scenario",
            proj=lambda col: f"=CHOOSE({SCN},{col}{gm_rows[0]},{col}{gm_rows[1]},{col}{gm_rows[2]})", fmt=PCT, bold=True)
-    for key, label, vals in [("dc", "Demand creation (marketing)", [.100, .098, .096, .095, .095]),
-                             ("oh", "Operating overhead", [.243, .240, .237, .235, .233]),
+    for key, label, vals in [("dc", "Demand creation (marketing)", [.105, .102, .099, .097, .096]),
+                             ("oh", "Operating overhead", [.273, .260, .250, .243, .238]),
                              ("da", "Depreciation and amortization", [.016] * 5),
                              ("sbc", "Stock-based compensation (non-cash, inside overhead)", [.015] * 5),
                              ("capex", "Capital expenditure", [.016] * 5)]:
@@ -223,9 +223,9 @@ def build():
     A.gap()
     A.sec("Capital allocation")
     for key, label, vals, fmt in [("repay", "Debt repaid ($m)", [2000, 0, 0, 0, 0], M),
-                                  ("dpsg", "Dividend per share growth", [.05] * 5, PCT),
-                                  ("bb", "Share buybacks ($m)", [1000, 2000, 2500, 3000, 3500], M),
-                                  ("bbp", "Average buyback share price ($)", [75] * 5, EPS),
+                                  ("dpsg", "Dividend per share growth", [0, 0, .03, .05, .05], PCT),
+                                  ("bb", "Share buybacks ($m)", [250, 750, 1500, 2500, 3000], M),
+                                  ("bbp", "Average buyback share price ($)", [40, 45, 50, 55, 60], EPS),
                                   ("issue", "New shares issued to employees (m)", [8] * 5, '#,##0.0')]:
         A.line(key, label, proj=lambda col, vals=vals: vals[PROJ.index(col)], fmt=fmt)
         for col in PROJ:
@@ -602,7 +602,7 @@ def build():
         ("Checks", "Balance sheet, cash and source checks"),
         ("", ""),
         ("Sources", "NIKE, Inc. Form 10-K filings (FY2024 to FY2026) and fiscal 2026 fourth quarter results release (revenue by region)."),
-        ("Note", "The forecast assumptions are my own judgement for this exercise, not company guidance."),
+        ("Note", "The FY2027 base case is set to match Nike's guidance of 1 Oct 2026 (revenue down a high single digit percentage, EPS of about $1.15 to $1.35 before restructuring). The regional split and FY2028 to FY2031 are my own assumptions."),
         ("Colour key", "Blue = input, black = formula, green = link to another sheet, yellow = key assumption, grey = actual (history)"),
         ("Checks status", f"={status}"),
     ]
